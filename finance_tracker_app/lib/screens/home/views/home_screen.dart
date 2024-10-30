@@ -14,12 +14,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
-  var widgetList = {
-    MainScreen(),
-    StatScreen(),
-  };
-
   int index = 0;
 
   @override
