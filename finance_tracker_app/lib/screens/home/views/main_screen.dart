@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../data/data.dart';
+
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
 
@@ -228,7 +230,7 @@ class MainScreen extends StatelessWidget {
             const SizedBox(height: 20),
             Expanded(
               child: ListView.builder(
-                itemCount: 15,
+                itemCount: transactionsData.length,
                 itemBuilder: (context, int i) {
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 16.0),
@@ -251,7 +253,7 @@ class MainScreen extends StatelessWidget {
                                       width: 50,
                                       height: 50,
                                       decoration: BoxDecoration(
-                                        color: Colors.yellow[700],
+                                        color: transactionsData[i]['color'],
                                         shape: BoxShape.circle
                                       ),
                                     ),
@@ -263,7 +265,7 @@ class MainScreen extends StatelessWidget {
                                 ),
                                 const SizedBox(width: 12),
                                 Text(
-                                  'Food',
+                                  transactionsData[i]['name'],
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: Theme.of(context).colorScheme.onSurface,
@@ -276,7 +278,7 @@ class MainScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 Text(
-                                  "Ksh. 100",
+                                  transactionsData[i]['totalAmount'],
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: Theme.of(context).colorScheme.onSurface,
@@ -284,7 +286,7 @@ class MainScreen extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  "Today",
+                                  transactionsData[i]['date'],
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: Theme.of(context).colorScheme.outline,
