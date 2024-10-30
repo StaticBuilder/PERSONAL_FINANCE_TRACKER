@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -60,6 +62,22 @@ class MainScreen extends StatelessWidget {
                 IconButton(onPressed: () {}, icon: const Icon(CupertinoIcons.settings))
               ],
             ),
+            const SizedBox(height: 20,),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.width / 2,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Theme.of(context).colorScheme.primary,
+                    Theme.of(context).colorScheme.secondary,
+                    Theme.of(context).colorScheme.tertiary,
+                  ],
+                  transform: const GradientRotation(pi / 4),
+                ),
+                borderRadius: BorderRadius.circular(25),
+              )
+            )
           ]
         )
       ) 
