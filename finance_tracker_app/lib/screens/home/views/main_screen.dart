@@ -125,7 +125,7 @@ class MainScreen extends StatelessWidget {
                                 child: Icon(
                                   CupertinoIcons.arrow_down,
                                   size: 12,
-                                  color: Colors.greenAccent,
+                                  color: Color.fromARGB(255, 15, 247, 134),
                                 )
                               ),
                             ),
@@ -164,9 +164,9 @@ class MainScreen extends StatelessWidget {
                               ),
                               child: const Center(
                                 child: Icon(
-                                  CupertinoIcons.arrow_down,
+                                  CupertinoIcons.arrow_up,
                                   size: 12,
-                                  color: Colors.red,
+                                  color: Color.fromARGB(255, 244, 18, 2),
                                 )
                               ),
                             ),
@@ -257,10 +257,11 @@ class MainScreen extends StatelessWidget {
                                         shape: BoxShape.circle
                                       ),
                                     ),
-                                    const Icon(
-                                      Icons.food_bank,
-                                      color: Colors.white,
-                                    )
+                                    transactionsData[i]['icon']
+                                    // const Icon(
+                                    //   Icons.food_bank,
+                                    //   color: Colors.white,
+                                    // )
                                   ],
                                 ),
                                 const SizedBox(width: 12),
