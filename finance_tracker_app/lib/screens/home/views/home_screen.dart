@@ -75,8 +75,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ), 
       ),
       body: index == 0
-      ? MainScreen() 
-      : StatScreen()
+      ? const MainScreen() 
+      : const StatScreen()
     );
   }
 }

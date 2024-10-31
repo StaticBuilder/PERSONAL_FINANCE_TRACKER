@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "672324020810",
+    "project_id": "finance-tracker-app-afea4",
+    "storage_bucket": "finance-tracker-app-afea4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672324020810:android:36b596cc342e62ff32d4b3",
+        "android_client_info": {
+          "package_name": "com.example.finance_tracker_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1wCOcH_BEu_OQW4YLaVAYmQYlPJWd1YI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
