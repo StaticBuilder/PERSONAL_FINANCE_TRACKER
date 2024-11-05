@@ -1,3 +1,4 @@
+import 'package:expense_repository/expense_repository.dart';
 import 'package:finance_tracker_app/screens/add_expense/blocs/get_categories_bloc/get_categories_bloc.dart';
 import 'package:finance_tracker_app/screens/add_expense/views/category_creation.dart';
 import 'package:flutter/material.dart';
@@ -22,10 +23,12 @@ class _AddExpenseState extends State<AddExpense> {
   TextEditingController dateController = TextEditingController();
   //TextEditingController categoryIconController = TextEditingController(); // Added if required
   DateTime selectDate = DateTime.now();
+  late Expense expense;
 
   @override
   void initState() {
     dateController.text = DateFormat('dd/MM/yyyy').format(DateTime.now());
+    expense = Expense.empty;
     super.initState();
   }
 
@@ -115,12 +118,12 @@ class _AddExpenseState extends State<AddExpense> {
                         itemBuilder: (context, int i) {
                           return Card(
                             child: ListTile(
-                              // onTap: () {
-                              //   setState(() {
-                              //     expense.category = state.categories[i];
-                              //     categoryController.text = expense.category.name;
-                              //   });
-                              // },
+                              onTap: () {
+                                setState(() {
+                                  expense.category = state.categories[i];
+                                  categoryController.text = expense.category.name;
+                                });
+                              },
                               leading: Image.asset(
                                 'assets/${state.categories[i].icon}.png',
                                 scale: 2,
