@@ -7,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../add_expense/blocs/create_expense_bloc/create_expense_bloc.dart';
 import '../../add_expense/views/add_expense.dart';
 import '../../stats/stats.dart';
 import 'main_screen.dart';
@@ -64,6 +65,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       BlocProvider(
                         create: (context) => GetCategoriesBloc(FirebaseExpenseRepo())..add(GetCategories()),
                       ),
+                      BlocProvider(
+                        create: (context) =>
+                            CreateExpenseBloc(FirebaseExpenseRepo()),
+                      )
                     ],
                     child: const AddExpense(),
                   ),
