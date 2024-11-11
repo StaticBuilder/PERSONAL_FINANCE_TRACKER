@@ -59,9 +59,10 @@ Future getCategoryCreation(BuildContext context) {
                     TextFormField(
                       onTap: () {
                         setState(() {
-                          if (isExpanded)
+                          if (isExpanded) {
                             isExpanded =
                                 false; // Collapse if expanded
+                          }
                         });
                       },
                       controller: categoryNameController,

@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../../../data/data.dart';
+//import '../../../data/data.dart';
 
 class MainScreen extends StatelessWidget {
   final List<Expense> expenses;
@@ -287,7 +287,7 @@ class MainScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 Text(
-                                  "\Ksh.\t${expenses[i].amount}.00",
+                                  "Ksh.\t${expenses[i].amount}.00",
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: Theme.of(context).colorScheme.onSurface,
